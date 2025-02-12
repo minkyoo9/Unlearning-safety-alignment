@@ -1,0 +1,10 @@
+# cache
+\~/
+
+# python cache
+*.pyc
+__pycache__/
+
+# Ipython cache
+.ipynb_checkpoints/
+*.ipynb
