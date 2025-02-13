@@ -7,4 +7,3 @@ __pycache__/
 
 # Ipython cache
 .ipynb_checkpoints/
-*.ipynb
