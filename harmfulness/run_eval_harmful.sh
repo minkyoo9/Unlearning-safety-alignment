@@ -36,10 +36,7 @@ done
 
 # Loop through each model path and corresponding output directory
 MODEL_NAME_OR_PATH="meta-llama/Llama-3.2-3B-Instruct"
-# MODEL_NAME_OR_PATH="../LLaMA-Factory/scripts/full/saves_3B/npo_full_adv/5e-6"
-# MODEL_NAME_OR_PATH="../muse_bench/baselines/scripts/tv"
 OUTPUT_DIR="./outs_llama/out_${EVAL_DATASET}"
-# OUTPUT_DIR="outs_llama/out_tv"
 
 mkdir -p "${OUTPUT_DIR}"
 OUTPUT_DIR="$(cd "${OUTPUT_DIR}" &>/dev/null && pwd)"
