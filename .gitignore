@@ -7,3 +7,4 @@ __pycache__/
 
 # Ipython cache
 .ipynb_checkpoints/
+data_merging/saved_classifier
