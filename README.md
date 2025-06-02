@@ -176,23 +176,23 @@ These prompts are also implemented in the provided codebase.
 
 ### Initial rewrite prompt used for \$A\_{rewrite}\$
 
-<img src="https://github.com/user-attachments/assets/21624851-bd3a-4315-be1f-dfc23fbe1c19" width="400">
+<img src="./figures/prompt1.png" width="400">
 
 ### Iterative rewrite prompt used for \$A\_{rewrite}\$
 
-<img src="https://github.com/user-attachments/assets/c2431c42-3050-4c02-b4b3-385bf074d417" width="400">
+<img src="./figures/prompt2.png" width="400">
 
 ### Evaluate prompt used for \$A\_{eval}\$
 
-<img src="https://github.com/user-attachments/assets/6e69975d-0e57-4549-886e-71d4552dd793" width="400">
+<img src="./figures/prompt3.png" width="400">
 
 ### Initial rewrite prompt used for \$A\_{rewrite}\$ with synthetic PII integration
 
-<img src="https://github.com/user-attachments/assets/6a959cf9-a3ef-415b-9288-172ccd1c6c53" width="400">
+<img src="./figures/prompt4.png" width="400">
 
 ### Examples of merged synthetic data \$D_{merged}^{*}\$ alongside the corresponding \$D_{reject}\$ and \$D\_{content}\$ used to create them.
 
-<img src="https://github.com/user-attachments/assets/6949a0ec-42ce-45c3-b9a7-d4b5517ad6c0" width="800">
+<img src="./figures/examples.png" width="800">
 
 ---
 
