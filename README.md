@@ -1,6 +1,6 @@
 # Unlearning-Safety-Alignment
 
-Implementation of *Refusal Is Not an Option: Unlearning Safety Alignment of LLMs*, **USENIX Security 2025**.
+Implementation of ***Refusal Is Not an Option: Unlearning Safety Alignment of LLMs***, **USENIX Security 2025**.
 
 **Note:** This implementation is based on the following repositories:
 
