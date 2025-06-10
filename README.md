@@ -169,6 +169,17 @@ cd harmfulness
 
 ---
 
+## Mitigation: BERT-based Unlearning Request Inspector
+
+A BERT-based classifier for inspecting unlearning request is provided in the `defense` directory.
+
+* To train and evaluate the classifier, run the notebook: `defense/BERT_classifier_adv.ipynb`
+
+* This notebook enables BERT-based classification and analysis of unlearning requests with simple, modular steps.
+
+---
+
+
 ## Supplementary Materials
 
 Below are the supplementary materials providing details on prompts used for the LLM agents and examples of the merged synthetic data.
