@@ -121,7 +121,7 @@ conda activate unlearning
   Utility scores for each model can be found at
   `LLaMA-Factory/scripts/full/results_3B/{method}_full_adv/{lr}/1_Stephen_King/{metric}.json`
   
-  > The specific metrics and experimental settings for Table 2 are described in Appendix B.4.
+  > The specific metric settings are described in Appendix B.4.
 
 - **TV Evaluation:**
   The unlearned models for Task Vector are stored in `muse_bench/baselines/scripts/tv`.
