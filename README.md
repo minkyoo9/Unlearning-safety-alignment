@@ -80,9 +80,9 @@ conda activate unlearning
    **Output:**
    * Model and training results are saved in `saves_3B/{method}_full_adv/${lr}`.
 
-   * Evaluation results are stored in `results_3B/{method}_full_adv/${lr}`.
+   * Evaluation results (i.e., utilities) are stored in `results_3B/{method}_full_adv/${lr}`.
 
-3. **Using TV**
+2. **Using TV**
 
    Run the unlearning process using the TV method.
 
@@ -97,21 +97,43 @@ conda activate unlearning
 
 ### Step 3: Evaluate Harmfulness Post-Unlearning
 
-Evaluate the safety of the unlearned model.
-
-```bash
-cd harmfulness
-./run_eval_harmful.sh --eval_dataset {EVAL_DATASET} --model_name_or_path {MODEL_PATH} --output_dir {OUTPUT_DIR}
-```
-
-**Example:**
+- **Evaluate the safety (i.e., harmfulness) of the unlearned model**.
 
   ```bash
-  ./run_eval_harmful.sh --eval_dataset HEx-PHI \
-    --model_name_or_path ../LLaMA-Factory/scripts/full/saves_3B/dpo_full_adv/5e-6 \
-    --output_dir outs_llama/dpo
+  cd harmfulness
+  ./run_eval_harmful.sh --eval_dataset {EVAL_DATASET} --model_name_or_path {MODEL_PATH} --output_dir {OUTPUT_DIR}
   ```
-**EVAL\_DATASET options:** `HEx-PHI`, `LLM-LAT_tot`, or `AdvBench`.
+  
+  **Example:**
+  
+    ```bash
+    ./run_eval_harmful.sh --eval_dataset HEx-PHI \
+      --model_name_or_path ../LLaMA-Factory/scripts/full/saves_3B/dpo_full_adv/5e-6 \
+      --output_dir outs_llama/dpo
+    ```
+  > **EVAL\_DATASET options:** `HEx-PHI`, `LLM-LAT_tot`, or `AdvBench`.
+  
+  > **Note:** The results are saved as `eval_results.json` in the specified `--output_dir`.
+  
+  > These values correspond to the "harmfulness scores" reported in Table 2 of the paper.
+
+- **Utility Evaluation:**
+  Utility scores for each model can be found at
+  `LLaMA-Factory/scripts/full/results_3B/{method}_full_adv/{lr}/1_Stephen_King/{metric}.json`
+  
+  > The specific metrics and experimental settings for Table 2 are described in Appendix B.4.
+
+- **TV Evaluation:**
+  The unlearned models for Task Vector are stored in `muse_bench/baselines/scripts/tv`.
+  To evaluate harmfulness, set `{MODEL_PATH}` of `run_eval_harmful.sh` to this directory.
+  For utility evaluation, use the provided script:
+  
+  ```bash
+  cd LLaMA-Factory/scripts/full
+  ./run_eval_tv.sh
+  ```
+  
+  This will output utility results for TV-unlearned models.
 
 ---
 
@@ -127,7 +149,13 @@ cd harmfulness
    
    **Output:** `data_merging/agents/GPT_results_score_{TARGET}.json`
 
-3. **Filter Crafted Unlearning Requests**
+  
+    > **API Cost Estimate:**
+    > The cost for merging with GPT-4o averages about **\$10** (subject to dataset size and prompt length) for each target.
+    > As a lower-cost alternative, you can use **GPT-4o-mini**, which reduces the cost to less than one-tenth.
+    > To use GPT-4o-mini, change the model names to `"gpt-4o-mini"` in `util.py`.
+    
+2. **Filter Crafted Unlearning Requests**
 
    Download the trained classifier for Harry Potter excerpts from [this link](https://github.com/minkyoo9/Unlearning-safety-alignment/releases/download/Model/saved_classifier).
    
@@ -155,7 +183,7 @@ cd harmfulness
 
 ### Step 3: Evaluate Harmfulness Post-Unlearning
 
-Assess the safety and harmfulness of the unlearned model.
+Assess the safety and harmfulness of the unlearned model. (for the detailed procedure, please refer to Scenario I)
 
 ```bash
 cd harmfulness
