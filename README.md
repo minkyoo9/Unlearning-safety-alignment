@@ -23,6 +23,16 @@ conda env create -f environment.yaml
 conda activate unlearning
 ```
 
+If you want to run IPython notebooks with this environment (required for Step 1 in Scenario II), please also register an IPython kernel as follows:
+
+```bash
+pip install ipykernel
+python -m ipykernel install --user --name unlearning
+```
+
+You can then select the "unlearning" kernel in JupyterLab/Notebook or VSCode for seamless notebook execution in the correct environment.
+
+
 ### 3. Set Your Hugging Face Token
 
 1. Insert your Hugging Face token in the following locations (used for training):
