@@ -181,7 +181,7 @@ You can then select the "unlearning" kernel in JupyterLab/Notebook or VSCode for
 
 > **Note:** Training uses the filtered dataset and follows the same procedure as Scenario I.
 
-* Update the `unlearn_data` field in the corresponding script (e.g., `LLaMA-Factory/scripts/full/run_{method}.sh`) to point to the correct dataset.
+* Update the `unlearn_data` field in the corresponding script (i.e., `LLaMA-Factory/scripts/full/run_{method}.sh`) to point to the correct dataset (e.g., `../../../data_merging/agents/GPT_results_score_{TARGET}_passed.json`).
   
 * Navigate to `LLaMA-Factory/scripts/full` and run the desired unlearning method:
 
@@ -213,7 +213,12 @@ A BERT-based classifier for inspecting unlearning request is provided in the `de
 
 * To train and evaluate the classifier, run the notebook: `defense/BERT_classifier_adv.ipynb`
 
-* This notebook enables BERT-based classification and analysis of unlearning requests with simple, modular steps.
+* This notebook enables BERT-based classification ($C_{enriched}$) and analysis of unlearning requests with simple, modular steps.
+
+* The `inspected_data_path` field can be set to either:
+  `../harmfulness/data/unlearning_data_AdvBench_3B.json` or
+  `../data_merging/agents/GPT_results_score_{TARGET}_passed.json`
+
 
 ---
 
