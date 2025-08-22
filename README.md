@@ -1,6 +1,22 @@
 # Unlearning-Safety-Alignment
 
-Implementation of ***Refusal Is Not an Option: Unlearning Safety Alignment of LLMs***, **USENIX Security 2025**.
+Implementation of ***Refusal Is Not an Option: Unlearning Safety Alignment of Large Language Models***, **USENIX Security 2025**.
+
+📄 **Paper Link:** [Refusal Is Not an Option: Unlearning Safety Alignment of Large Language Models](https://www.usenix.org/system/files/usenixsecurity25-song-minkyoo.pdf)
+
+📑 **Citation:**
+
+```bibtex
+@inproceedings{song2025refusal,
+  author       = {Minkyoo Song and Hanna Kim and Jaehan Kim and Seungwon Shin and Sooel Son},
+  title        = {Refusal Is Not an Option: Unlearning Safety Alignment of Large Language Models},
+  booktitle    = {34th USENIX Security Symposium (USENIX Security 2025)},
+  year         = {2025},
+  location     = {Seattle, WA},
+  publisher    = {USENIX Association},
+  url          = {https://www.usenix.org/system/files/usenixsecurity25-song-minkyoo.pdf}
+}
+```
 
 **Note:** This implementation is based on the following repositories:
 
