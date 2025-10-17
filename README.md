@@ -1,4 +1,4 @@
-# Unlearning-Safety-Alignment
+# Refusal Is Not an Option: Unlearning Safety Alignment of Large Language Models
 
 Implementation of ***Refusal Is Not an Option: Unlearning Safety Alignment of Large Language Models***, **USENIX Security 2025**.
 
